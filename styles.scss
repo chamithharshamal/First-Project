@@ -1,0 +1,144 @@
+@import url("https://fonts.googlrapis.com.css2?family=Inter:wght@300;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(67deg, #131086 ,#B621F3);
+    padding: 40px;
+}
+.container{
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left: 50px;
+    background-color: white;
+}
+.login-left{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    image{
+        width:80%
+    };
+}
+
+.login-header{
+    margin-bottom: 50px;
+    h1{
+        font-size: 40px;
+        margin-bottom: 10px
+    }
+    p{
+        opacity: 0.7;
+    }
+}
+.login-form{
+    width: 450px;
+    &-content{
+        display: flex;
+        gap: 35px;
+        flex-direction: column;    
+
+    }
+    &-footer{
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+        a{
+            flex: 6;
+            gap: 15px;
+            border: 1px solid black;
+            border-radius: 100px;
+            padding: 0.6rem;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+
+            &.hover{
+                background-color: white;
+            }
+
+        }
+
+    }
+}
+.form-item label:not(.checkboxlabel){
+    display: inline-block;
+    background-color: white;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    position: absolute;
+    padding: 0 20px;
+    transform: translate(30px, -10px);
+    font-size: 14px;
+
+
+}
+input[type="email"],
+input[type="password"]{
+    border: 1px solid black;
+    height: 55px;
+    padding: 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 100px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+input[type="checkbox"]{
+    width: 30px;
+    height: 25px;
+    accent-color: #131086 ;
+}
+button{
+    border: none;
+    background: linear-gradient(45deg,#131086, #B621F3 );
+    color: antiquewhite;
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 18px;
+    height: 55px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+@media(max-width: 1350px){
+.login-left{
+    padding: 50px !important;
+}
+.login-form{
+    width: 100%;
+    &-footer{
+        flex-direction: column;
+        gap: 15px;}
+    }
+}
+@media(max-width:768px){
+    body{
+        padding: 20px;
+    }
+    .container{
+        grid-template-columns: auto;
+    }
+    .login-right{
+        display: none;
+    }
+}
